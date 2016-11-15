@@ -1,0 +1,2 @@
+module StorageSpaceHelper
+end
