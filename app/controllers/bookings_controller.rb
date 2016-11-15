@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
 
   def index
       @bookings = Booking.all
-    end
+  end
 
   def create
     @Booking = Booking.new(booking_params)
@@ -22,13 +22,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:username)
   end
-
-
-
-
-
-
-
-
 
 end
