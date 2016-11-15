@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
   def index
-      @bookings = Booking.all
+    @bookings = Booking.all
   end
 
   def create
@@ -15,12 +15,9 @@ class BookingsController < ApplicationController
     redirect_to booking_path(@booking)
   end
 
-
-
   private
 
   def booking_params
     params.require(:booking).permit(:username)
   end
-
 end
