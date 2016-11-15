@@ -6,6 +6,8 @@ class StorageSpaceController < ApplicationController
   def create
     @storage_space = StorageSpace.new(storage_space_params)
     @storage_space.save
+  end
+
   def update
     @storage_space = StorageSpace.find(params[:id])
     @storage_space.update(storage_space_params)
