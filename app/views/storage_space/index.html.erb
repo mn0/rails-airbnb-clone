@@ -1,5 +1,28 @@
+<<<<<<< HEAD
 <% @storage_space.each do |s| %>
   <%= s.location %>
   <%= s.space %>
 <% end %>
 
+=======
+<h1>Here are all the storage spaces</h1>
+
+<% @storage_spaces.each do |s| %>
+  <ul>
+    <li><%= s.location %></li>
+    <li><%= s.space %></li>
+<% end %>
+
+
+<div class="container">
+  <div class="row">
+    <% @storage_spaces.each do |s| %>
+        <div class="col-xs-12 col-sm-4">
+        <%= s.location %>
+        <%= s.space %>
+        </div>
+    <% end %>
+
+  </div>
+</div>
+>>>>>>> storage-listing
