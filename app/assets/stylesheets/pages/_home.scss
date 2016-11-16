@@ -29,12 +29,13 @@
   color: black;
 }
 
-.card {
+.card p {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
-  color: white;
+  color: black;
   position: relative;
+  border: gray;
 }
 .card-user {
   position: absolute;
@@ -58,7 +59,7 @@
 }
 .card-description p {
   font-size: 13px;
-  }
+}
 .card-link {
   position: absolute;
   top: 0;
