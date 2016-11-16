@@ -4,7 +4,8 @@
     <p>Store your stuff or turn apartment space into income</p>
     <%= form_tag storage_space_index_path, method: :get, class: 'form-inline' do %>
       <div class="input-group">
-        <input type="text" name="size" placeholder="20" class="form-control" style="width: 50px">
+        <input type="text" name="size" placeholder="20" class="form-control" style="width: 100px">
+        <input type="text" name="location" placeholder="london" class="form-control" style="width: 100px">
         <div class="input-group-addon">sq. meters</div>
       </div>
       <button class="btn btn-primary">Find storage space</button>
