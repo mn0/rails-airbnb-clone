@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'storage_space/index'
-
-  get 'storage_space/show'
-
-  get 'storage_space/create'
+  resources :storage_space, only: [ :index, :show, :new, :create ]
 
   devise_for :users
   root to: 'pages#home'

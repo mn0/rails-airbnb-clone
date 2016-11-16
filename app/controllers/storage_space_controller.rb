@@ -1,6 +1,6 @@
 class StorageSpaceController < ApplicationController
   def index
-    @storage_spaces = StorageSpace.all
+    @storage_space = StorageSpace.where('space >= ?', params[:size] || 0)
   end
 
   def create
