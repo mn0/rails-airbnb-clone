@@ -9,10 +9,13 @@
   <div class="row">
     <% @storage_space.each do |s| %>
         <div class="col-xs-12 col-sm-4">
-        <%= s.location %>
-        <%= s.space %>
+          <div class="card">
+            <%= s.location %>
+            <%= s.space %>
+          </div>
         </div>
     <% end %>
 
   </div>
 </div>
+
