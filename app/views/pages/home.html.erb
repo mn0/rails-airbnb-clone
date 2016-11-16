@@ -1,11 +1,11 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,301,068,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'storage.jpg' %>);">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,20,68,0.3) 0%, rgba(0,20,51,0.5) 50%), url(<%= image_path 'storage.jpg' %>);">
   <div class="banner-content">
     <h1>Storage, G</h1>
     <p>Store your stuff or turn apartment space into income</p>
     <%= form_tag storage_space_index_path, method: :get, class: 'form-inline' do %>
       <div class="input-group">
+        <input type="text" name="location" placeholder="london" class="form-control"style="width: 100px; margin-right: 5px">
         <input type="text" name="size" placeholder="20" class="form-control" style="width: 100px">
-        <input type="text" name="location" placeholder="london" class="form-control" style="width: 100px">
         <div class="input-group-addon">sq. meters</div>
       </div>
       <button class="btn btn-primary">Find storage space</button>

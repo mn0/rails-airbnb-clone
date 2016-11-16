@@ -1,7 +1,9 @@
 class StorageSpaceController < ApplicationController
   def index
-    @storage_space = StorageSpace.where('space >= ?', params[:size] || 0).near(params[:location], 50)
+    @storage_space = StorageSpace.where('space >= ?', params[:size] || 0)
   end
+
+  # .near(params[:location], 50)
 
   def create
     @storage_space = StorageSpace.new(storage_space_params)
