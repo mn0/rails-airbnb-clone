@@ -7,15 +7,14 @@
 
 <div class="container">
   <div class="row">
-    <% @storage_space.each do |s| %>
-        <div class="col-xs-12 col-sm-4">
-          <div class="card">
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <% @storage_space.each do |s| %>
             <%= s.location %>
             <%= s.space %>
-          </div>
+          <% end %>
         </div>
-    <% end %>
-
+      </div>gi
   </div>
 </div>
 
