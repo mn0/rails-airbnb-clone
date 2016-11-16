@@ -2,13 +2,13 @@
   <div class="banner-content">
     <h1>Storage, G</h1>
     <p>Store your stuff or turn apartment space into income</p>
-    <form action="storage_space_show_path" method="get">
-      <input type="text" name="size" placeholder="How much space do you need in squared metres?">
-      <input type="submit">
-    </form>
-    <p></p>
-    <a class="btn btn-primary btn-lg">View Storage near you!</a>
-
+    <%= form_tag storage_space_index_path, method: :get, class: 'form-inline' do %>
+      <div class="input-group">
+        <input type="text" name="size" placeholder="20" class="form-control" style="width: 50px">
+        <div class="input-group-addon">sq. meters</div>
+      </div>
+      <button class="btn btn-primary">Find storage space</button>
+    <% end %>
   </div>
 </div>
 <%= link_to "link", new_user_session_path %>
