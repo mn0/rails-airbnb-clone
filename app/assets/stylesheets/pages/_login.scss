@@ -1,5 +1,5 @@
 .row {
-  color: white;
+  color: black;
   text-align: center;
   height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
@@ -18,4 +18,9 @@
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
+}
+
+.card-grey {
+  background-color: #f2f2f2;
+  padding: 80px;
 }
