@@ -1,0 +1,12 @@
+
+<div class="container">
+  <h1>Welcome back, <%= @user.username %></center></h1>
+  <h2> Your storage space bookings: </h2>
+  <div class="row">
+    <% @user.bookings.each do |s| %>
+    <div class="col-xs-12 col-sm-4">
+      <p>This booking is for <%= s.space_required %> m^2.</p>
+    </div>
+    <% end %>
+  </div>
+</div>
