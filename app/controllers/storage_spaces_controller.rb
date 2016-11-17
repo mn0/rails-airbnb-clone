@@ -13,6 +13,10 @@ class StorageSpacesController < ApplicationController
     @storage_space.save
   end
 
+  def new
+    @storage_space = StorageSpace.new
+  end
+
   def update
 
     @storage_space.update(storage_space_params)
