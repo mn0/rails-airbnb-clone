@@ -10,6 +10,7 @@ class StorageSpacesController < ApplicationController
 
   def create
     @storage_space = StorageSpace.new(storage_space_params)
+    @storage_space.user = current_user
     @storage_space.save
   end
 
@@ -30,7 +31,7 @@ class StorageSpacesController < ApplicationController
   private
 
   def storage_space_params
-    params.require(:storage_space).permit(:username)
+    params.require(:storage_space).permit(:location, :space)
   end
 
   def set_storage_space
