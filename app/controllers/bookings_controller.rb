@@ -1,10 +1,13 @@
 class BookingsController < ApplicationController
+  before_action do
+    @storage_space = StorageSpace.find(params[:storage_space_id])
+  end
+
   def index
     @bookings = Booking.all
   end
 
   def create
-    @storage_space = StorageSpace.find(params[:storage_space_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.storage_space = @storage_space
