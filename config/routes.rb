@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :storage_spaces, only: [ :index, :show, :new, :create ]
+  resources :storage_spaces, only: [ :index, :show, :new, :create ] do
+    resources :bookings
+  end
   # GET /storage_spaces          => :index
   # GET /storage_spaces/new      => :new
   # POST /storage_spaces         => :created
