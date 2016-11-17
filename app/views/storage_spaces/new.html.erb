@@ -1,5 +1,11 @@
-<%= simple_form_for [@storage_space] do |f| %>
-  <%= f.input :location %>
-  <%= f.input :space %>
-  <%= f.submit "submit", class: "btn btn-primary" %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 offset-3" id="create_storage">
+      <%= simple_form_for [@storage_space] do |f| %>
+      <%= f.input :location %>
+      <%= f.input :space %>
+      <%= f.submit "submit", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
