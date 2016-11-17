@@ -2,10 +2,11 @@ class StorageSpacesController < ApplicationController
   before_action :set_storage_space, only: [ :show, :update ]
 
   def index
-    @storage_space = StorageSpace.near(params[:location], 50).where('space >= ?', params[:size] || 0)
+    @storage_space = StorageSpace.near(params[:location], 50).where('space >= ?', (params[:size].blank? ? 0 : params[:size]))
   end
 
-  # .near(params[:location], 50)
+
+  # .near(params[:location], 50) STILL NEEDS LOGIC IN CASE FIELD LEFT BLANK
 
   def create
     @storage_space = StorageSpace.new(storage_space_params)
