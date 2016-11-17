@@ -1,12 +1,18 @@
 class BookingsController < ApplicationController
-
   def index
     @bookings = Booking.all
   end
 
   def create
-    @Booking = Booking.new(booking_params)
+    @storage_space = StorageSpace.find(params[:storage_space_id])
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.storage_space = @storage_space
     @booking.save
+  end
+
+  def new
+    @booking = Booking.new
   end
 
   def update
@@ -18,6 +24,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:username)
+    params.require(:booking).permit(:space_required)
   end
 end
