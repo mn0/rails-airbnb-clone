@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :find_user
+
   def edit
     @user = User.find(params[:id])
   end
@@ -11,6 +13,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def find_user
+
+  end
 
   def user_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
