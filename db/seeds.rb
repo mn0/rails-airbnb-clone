@@ -3,9 +3,6 @@ jojo = User.create!(username: "jojo", email: "jojo@jo.com", password: "jojojo")
 george = User.create!(username: "george", email: "george@george.com", password: "george123")
 matt = User.create!(username: "matt", email: "matt@matt.com", password: "matt123")
 
-
-
-
 StorageSpace.create!(user: alex, location: '22 elder st, london', space: 34)
 StorageSpace.create!(user: jojo, location: '11 downing st, london', space: 80)
 StorageSpace.create!(user: george, location: '1 knightsbridge, london', space: 1000)
