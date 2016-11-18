@@ -5,7 +5,13 @@ class StorageSpacesController < ApplicationController
     @storage_space = StorageSpace.near(params[:location], 50).where('space >= ?', (params[:size].blank? ? 0 : params[:size]))
   end
 
+# @flats = Flat.where.not(latitude: nil, longitude: nil)
 
+#     @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
+#       marker.lat flat.latitude
+#       marker.lng flat.longitude
+#       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+#     end
   # .near(params[:location], 50) STILL NEEDS LOGIC IN CASE FIELD LEFT BLANK
 
   def create
@@ -30,6 +36,10 @@ class StorageSpacesController < ApplicationController
 
   # GET /storage_spaces/:id
   def show
+      @hash = Gmaps4rails.build_markers(@storage_space) do |storage_space, marker|
+      marker.lat storage_space.latitude
+      marker.lng storage_space.longitude
+    end
   end
 
   private
