@@ -9,11 +9,29 @@
 
     <div class="col-xs-12 col-sm-4">
     <div class="card">
-    <h4>Your Booking at <%= b.storage_space.location %></h4>
-      <p>This booking is for <%= b.space_required %> Meters Squared.</p>
+    <h4><%= b.storage_space.location %></h4>
+      <p>Space requested: <b><%= b.space_required %></b>  meters squared.</p>
+      <p>From <%= b.start_date? ? b.start_date : "unspecified" %> until <%=  b.end_date? ? b.end_date : "unspecified" %></p>
     </div>
     </div>
     <% end %>
 
   </div>
+
+  <div class="row" style="margin-top: 30px;">
+  <h2> Your spaces: </h2>
+
+    <% @user.storage_spaces.each do |s| %>
+
+    <div class="col-xs-12 col-sm-4">
+    <div class="card">
+    <h4><%= s.location %></h4>
+      <p><b><%= s.space %></b> meters squared available.</p>
+      <p><b><%= s.bookings.size %> </b> bookings have been made for this space.</p>
+    </div>
+    </div>
+    <% end %>
+
+  </div>
+
 </div>
