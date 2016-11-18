@@ -11,7 +11,11 @@ class StorageSpacesController < ApplicationController
   def create
     @storage_space = StorageSpace.new(storage_space_params)
     @storage_space.user = current_user
-    @storage_space.save
+    if @storage_space.save
+      redirect_to storage_space_path(@storage_space)
+    else
+      render :new
+    end
   end
 
   def new
