@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,231,168,0.6) 0%, rgba(0,36,61,0.6) 50%);">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,231,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @storage_space.photo.path, height: 300, width: 400, crop: :fill %>');">
 
   <div class="banner-content">
   <h1><strong><%= @storage_space.user.username %></strong></h1>

@@ -4,6 +4,7 @@
       <%= simple_form_for [@storage_space] do |f| %>
       <%= f.input :location %>
       <%= f.input :space %>
+      <%= f.input :photo, as: :attachinary %>
       <%= f.submit "submit", class: "btn btn-primary" %>
       <% end %>
     </div>
