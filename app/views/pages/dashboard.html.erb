@@ -12,6 +12,7 @@
     <h4><%= b.storage_space.location %></h4>
       <p>Space requested: <b><%= b.space_required %></b>  meters squared.</p>
       <p>From <%= b.start_date? ? b.start_date : "unspecified" %> until <%=  b.end_date? ? b.end_date : "unspecified" %></p>
+      <p>Price: £<%= (b.space_required * (b.end_date - b.start_date).to_i)*20 %></p>
     </div>
     </div>
     <% end %>
