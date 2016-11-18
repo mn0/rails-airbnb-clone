@@ -3,6 +3,8 @@
 <%= simple_form_for [@storage_space, @booking] do |f| %>
   <%= f.input :space_required, label: "How much space will you need?" %>
 <!--   <p> this is where you would specify how long you want to store it</p>-->
+  <%= f.input :start_date, label: "From which date?" %>
+  <%= f.input :end_date, label: "Until which date?" %>
 
   <%= f.submit "submit", class: "btn btn-primary" %>
 <% end %>
