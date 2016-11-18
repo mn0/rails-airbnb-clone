@@ -29,6 +29,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:space_required)
+    params.require(:booking).permit(:space_required, :start_date, :end_date)
   end
 end
