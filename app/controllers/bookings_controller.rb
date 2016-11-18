@@ -11,7 +11,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.storage_space = @storage_space
-    @booking.save
+    if @booking.save
+      redirect_to dashboard_path
+    end
   end
 
   def new
