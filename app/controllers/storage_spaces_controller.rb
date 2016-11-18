@@ -35,7 +35,7 @@ class StorageSpacesController < ApplicationController
   private
 
   def storage_space_params
-    params.require(:storage_space).permit(:location, :space)
+    params.require(:storage_space).permit(:location, :space, :photo)
   end
 
   def set_storage_space
